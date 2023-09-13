@@ -52,6 +52,8 @@ function PlayState:update(dt)
     if self.ball:collides(self.paddle) then
         -- reverse Y velocity if collision detected between paddle and ball
         self.ball.dy = -self.ball.dy
+        self.ball.y = VIRTUAL_HEIGHT - 42
+
         gSounds['paddle-hit']:play()
     end
 

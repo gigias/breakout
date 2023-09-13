@@ -178,7 +178,8 @@ function love.draw()
         -- no rotation
         0,
         -- scale factors on X and Y axis so it fills the screen
-        VIRTUAL_WIDTH / (backgroundWidth - 1), VIRTUAL_HEIGHT / (backgroundHeight - 1))
+        -- VIRTUAL_WIDTH / (backgroundWidth - 1), VIRTUAL_HEIGHT / (backgroundHeight - 1))
+         VIRTUAL_WIDTH /  backgroundWidth, VIRTUAL_HEIGHT / backgroundHeight)
     
     -- use the state machine to defer rendering to the current state we're in
     gStateMachine:render()
